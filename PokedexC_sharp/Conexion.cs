@@ -16,7 +16,7 @@ namespace PokedexC_sharp
 
         public Conexion()
         {
-            conexion = new MySqlConnection("Server = 127.0.0.1; Database = listapokemons; Uid = root; Pwd =; Port = 3306");
+            conexion = new MySqlConnection("Server = 192.168.71.139; Database = listapokemons; Uid = root; Pwd =; Port = 3306");
         }
 
         public DataTable getPokemonPorId(int id)
