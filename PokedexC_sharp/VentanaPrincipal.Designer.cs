@@ -49,7 +49,7 @@
             this.izq.Name = "izq";
             this.izq.Size = new System.Drawing.Size(75, 52);
             this.izq.TabIndex = 1;
-            this.izq.Text = ">";
+            this.izq.Text = "<";
             this.izq.UseVisualStyleBackColor = true;
             this.izq.Click += new System.EventHandler(this.izq_Click);
             // 
@@ -59,7 +59,7 @@
             this.der.Name = "der";
             this.der.Size = new System.Drawing.Size(75, 52);
             this.der.TabIndex = 2;
-            this.der.Text = "<";
+            this.der.Text = ">";
             this.der.UseVisualStyleBackColor = true;
             this.der.Click += new System.EventHandler(this.der_Click);
             // 
