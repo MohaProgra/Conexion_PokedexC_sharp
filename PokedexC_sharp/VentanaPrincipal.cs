@@ -52,5 +52,12 @@ namespace PokedexC_sharp
             pictureBox1.Image = convierteBlobImagen((byte[])misPokemons.Rows[0]["imagen"]);
 
         }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            nombrePokemon.Text = dataGridView1.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
+            pictureBox1.Image = convierteBlobImagen((byte[])dataGridView1.Rows[e.RowIndex].Cells["imagen"].Value);
+
+        }
     }
 }
