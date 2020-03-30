@@ -32,7 +32,9 @@
             this.izq = new System.Windows.Forms.Button();
             this.der = new System.Windows.Forms.Button();
             this.nombrePokemon = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -65,16 +67,25 @@
             // 
             // nombrePokemon
             // 
-            this.nombrePokemon.Location = new System.Drawing.Point(241, 13);
+            this.nombrePokemon.Location = new System.Drawing.Point(12, 366);
             this.nombrePokemon.Name = "nombrePokemon";
-            this.nombrePokemon.Size = new System.Drawing.Size(184, 77);
+            this.nombrePokemon.Size = new System.Drawing.Size(189, 46);
             this.nombrePokemon.TabIndex = 3;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(223, 13);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(505, 399);
+            this.dataGridView1.TabIndex = 4;
             // 
             // VentanaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(588, 459);
+            this.ClientSize = new System.Drawing.Size(740, 461);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.nombrePokemon);
             this.Controls.Add(this.der);
             this.Controls.Add(this.izq);
@@ -82,6 +93,7 @@
             this.Name = "VentanaPrincipal";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -92,6 +104,7 @@
         private System.Windows.Forms.Button izq;
         private System.Windows.Forms.Button der;
         private System.Windows.Forms.Label nombrePokemon;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
