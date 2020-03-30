@@ -58,6 +58,17 @@ namespace PokedexC_sharp
             nombrePokemon.Text = dataGridView1.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
             pictureBox1.Image = convierteBlobImagen((byte[])dataGridView1.Rows[e.RowIndex].Cells["imagen"].Value);
 
+            
+
+        }
+
+        private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            String nombre = dataGridView1.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
+            String id = dataGridView1.Rows[e.RowIndex].Cells["id"].Value.ToString();
+
+            MessageBox.Show(miConexion.actualizaPokemon(id, nombre));
+
         }
     }
 }
