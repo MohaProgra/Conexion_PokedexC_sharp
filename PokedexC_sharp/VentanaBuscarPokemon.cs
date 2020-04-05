@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace PokedexC_sharp
 {
-    public partial class VentanaSeleccionPokemon : Form
+    public partial class VentanaBuscarPokemon : Form
 
     {
 
@@ -19,7 +19,7 @@ namespace PokedexC_sharp
         DataTable misPokemons = new DataTable();
 
 
-        public VentanaSeleccionPokemon()
+        public VentanaBuscarPokemon()
         {
             InitializeComponent();
 

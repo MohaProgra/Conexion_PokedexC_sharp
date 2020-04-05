@@ -1,6 +1,6 @@
 ﻿namespace PokedexC_sharp
 {
-    partial class VentanaSeleccionPokemon
+    partial class VentanaBuscarPokemon
     {
         /// <summary>
         /// Required designer variable.

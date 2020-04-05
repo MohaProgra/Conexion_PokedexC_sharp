@@ -38,8 +38,16 @@ namespace PokedexC_sharp
             idActual--;
             if (idActual <= 0) { idActual = 1; }
 
+            //Para conoer los datos del pokemon que seleccione
+
             misPokemons = miConexion.getPokemonPorId(idActual);
             nombrePokemon.Text = misPokemons.Rows[0]["nombre"].ToString();
+            IDPokemon.Text = misPokemons.Rows[0]["id"].ToString();
+            alturapokemon.Text = misPokemons.Rows[0]["altura"].ToString();
+            pesopokemon.Text = misPokemons.Rows[0]["peso"].ToString();
+            especiepokemon.Text = misPokemons.Rows[0]["especie"].ToString();
+            habilidadpokemon.Text = misPokemons.Rows[0]["habilidad"].ToString();
+            descripcionpokemon.Text = misPokemons.Rows[0]["descripcion"].ToString();
             pictureBox1.Image = convierteBlobImagen((byte[])misPokemons.Rows[0]["imagen"]);
             
         }
@@ -49,43 +57,48 @@ namespace PokedexC_sharp
             idActual++;
             if (idActual >= 151) { idActual = 151; }
 
+            //para conocer los datos del pokemon que selecione
+
             misPokemons = miConexion.getPokemonPorId(idActual);
             nombrePokemon.Text = misPokemons.Rows[0]["nombre"].ToString();
+            IDPokemon.Text = misPokemons.Rows[0]["id"].ToString();
+            alturapokemon.Text = misPokemons.Rows[0]["altura"].ToString();
+            pesopokemon.Text = misPokemons.Rows[0]["peso"].ToString();
+            especiepokemon.Text = misPokemons.Rows[0]["especie"].ToString();
+            habilidadpokemon.Text = misPokemons.Rows[0]["habilidad"].ToString();
+            descripcionpokemon.Text = misPokemons.Rows[0]["descripcion"].ToString();
             pictureBox1.Image = convierteBlobImagen((byte[])misPokemons.Rows[0]["imagen"]);
 
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //nombrePokemon.Text = dataGridView1.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
-            //pictureBox1.Image = convierteBlobImagen((byte[])dataGridView1.Rows[e.RowIndex].Cells["imagen"].Value);
-
-            
-
-        }
-
-        private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
-        {
-            //String nombre = dataGridView1.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
-            //String id = dataGridView1.Rows[e.RowIndex].Cells["id"].Value.ToString();
-
-            //MessageBox.Show(miConexion.actualizaPokemon(id, nombre));
-
-        }
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
-            VentanaSeleccionPokemon eligePokemon = new VentanaSeleccionPokemon();
-            eligePokemon.ShowDialog();
+            
+            
+            //Este metodo nos permite abrir la base de datos clicando en el boton
+            //"BucarPokemon" esto hace que se abra otro form para seleccionar aquel 
+            //pokemon del cual queremos saber información.
 
+            VentanaBuscarPokemon eligePokemon = new VentanaBuscarPokemon();
+            eligePokemon.ShowDialog();
             idActual = eligePokemon.idSeleccionado;
             //MessageBox.Show(eligePokemon.idSeleccionado.ToString());
             misPokemons = miConexion.getPokemonPorId(idActual);
             nombrePokemon.Text = misPokemons.Rows[0]["nombre"].ToString();
+            IDPokemon.Text = misPokemons.Rows[0]["id"].ToString();
+            alturapokemon.Text = misPokemons.Rows[0]["altura"].ToString();
+            pesopokemon.Text = misPokemons.Rows[0]["peso"].ToString();
+            especiepokemon.Text = misPokemons.Rows[0]["especie"].ToString();
+            habilidadpokemon.Text = misPokemons.Rows[0]["habilidad"].ToString();
+            descripcionpokemon.Text = misPokemons.Rows[0]["descripcion"].ToString();
             pictureBox1.Image = convierteBlobImagen((byte[])misPokemons.Rows[0]["imagen"]);
 
 
 
         }
+
+        
     }
 }
