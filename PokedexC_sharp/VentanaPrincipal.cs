@@ -38,7 +38,7 @@ namespace PokedexC_sharp
             idActual--;
             if (idActual <= 0) { idActual = 1; }
 
-            //Para conoer los datos del pokemon que seleccione
+            //Para conocer los datos del pokemon que seleccione
 
             misPokemons = miConexion.getPokemonPorId(idActual);
             nombrePokemon.Text = misPokemons.Rows[0]["nombre"].ToString();

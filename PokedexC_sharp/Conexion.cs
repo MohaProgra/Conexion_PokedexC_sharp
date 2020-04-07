@@ -14,16 +14,16 @@ namespace PokedexC_sharp
 
         public MySqlConnection conexion;
 
-        public Conexion()
-        {
-            conexion = new MySqlConnection("Server = 192.168.71.144 ; Database = listapokemons; Uid = root; Pwd =; Port = 3306");
-        }
+       
 
         public DataTable getPokemonPorId(int id)
         {
 
             try
             {
+                //Con la conexion dentro del try/catch como pides.
+
+                conexion = new MySqlConnection("Server = 192.168.71.149 ; Database = listapokemons; Uid = root; Pwd =; Port = 3306");
                 conexion.Open();
                 MySqlCommand consulta =
                     new MySqlCommand("SELECT * FROM pokemon where id ='" + id + "'", conexion);
@@ -47,6 +47,9 @@ namespace PokedexC_sharp
 
             try
             {
+                //Con la conexion dentro del try/catch como pides.
+
+                conexion = new MySqlConnection("Server = 192.168.71.149 ; Database = listapokemons; Uid = root; Pwd =; Port = 3306");
                 conexion.Open();
                 MySqlCommand consulta =
                     new MySqlCommand("SELECT * FROM pokemon", conexion);
@@ -69,6 +72,9 @@ namespace PokedexC_sharp
 
             try
             {
+                //Con la conexion dentro del try/catch como pides.
+
+                conexion = new MySqlConnection("Server = 192.168.71.149 ; Database = listapokemons; Uid = root; Pwd =; Port = 3306");
                 conexion.Open();
                 MySqlCommand consulta =
                     new MySqlCommand("UPDATE pokemon set nombre = '" + dato + "' WHERE id = '" + id + "'", conexion);
@@ -93,11 +99,6 @@ namespace PokedexC_sharp
 
 
         }
-
-
-
-
-
 
 
     }
